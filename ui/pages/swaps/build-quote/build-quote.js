@@ -126,7 +126,7 @@ export default function BuildQuote({
   const t = useContext(I18nContext);
   const dispatch = useDispatch();
   const history = useHistory();
-  const metaMetricsEvent = useContext(MetaMetricsContext);
+  const trackEvent = useContext(MetaMetricsContext);
 
   const [fetchedTokenExchangeRate, setFetchedTokenExchangeRate] = useState(
     undefined,
@@ -435,7 +435,7 @@ export default function BuildQuote({
   useEffect(() => {
     dispatch(resetSwapsPostFetchState());
     dispatch(setReviewSwapClickedTimestamp());
-    metaMetricsEvent({
+    trackEvent({
       event: 'Build Quote Page Loaded',
       category: 'swaps',
       sensitiveProperties: {
@@ -448,7 +448,7 @@ export default function BuildQuote({
     });
   }, [
     dispatch,
-    metaMetricsEvent,
+    trackEvent,
     currentSmartTransactionsEnabled,
     hardwareWalletType,
     hardwareWalletUsed,
@@ -462,7 +462,7 @@ export default function BuildQuote({
         className="build-quote__token-etherscan-link build-quote__underline"
         key="build-quote-etherscan-link"
         onClick={() => {
-          metaMetricsEvent({
+          trackEvent({
             event: 'Clicked Block Explorer Link',
             category: 'Swaps',
             properties: {
@@ -527,7 +527,7 @@ export default function BuildQuote({
           history,
           fromTokenInputValue,
           maxSlippage,
-          metaMetricsEvent,
+          trackEvent,
           pageRedirectionDisabled,
         ),
       );
@@ -546,7 +546,7 @@ export default function BuildQuote({
     dispatch,
     history,
     maxSlippage,
-    metaMetricsEvent,
+    trackEvent,
     isReviewSwapButtonDisabled,
     fromTokenInputValue,
     fromTokenAddress,
@@ -795,7 +795,7 @@ export default function BuildQuote({
                       className="build-quote__token-etherscan-link"
                       key="build-quote-etherscan-link"
                       onClick={() => {
-                        metaMetricsEvent({
+                        trackEvent({
                           event: 'Clicked Block Explorer Link',
                           category: 'Swaps',
                           properties: {
@@ -857,7 +857,7 @@ export default function BuildQuote({
                 history,
                 fromTokenInputValue,
                 maxSlippage,
-                metaMetricsEvent,
+                trackEvent,
               ),
             );
           } else if (areQuotesPresent) {
