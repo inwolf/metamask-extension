@@ -2453,9 +2453,6 @@
   "showRecommendations": {
     "message": "推奨を表示"
   },
-  "showSeedPhrase": {
-    "message": "シークレットリカバリーフレーズを表示"
-  },
   "showTestnetNetworks": {
     "message": "テストネットワークを表示"
   },

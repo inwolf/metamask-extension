@@ -1599,9 +1599,6 @@
   "showPrivateKeys": {
     "message": "Mostrar claves privadas"
   },
-  "showSeedPhrase": {
-    "message": "Mostrar frase secreta de recuperación"
-  },
   "sigRequest": {
     "message": "Solicitud de firma"
   },

@@ -1292,9 +1292,6 @@
   "showPrivateKeys": {
     "message": "Mostra Chiave Privata"
   },
-  "showSeedPhrase": {
-    "message": "Mostra frase seed"
-  },
   "sigRequest": {
     "message": "Firma Richiesta"
   },

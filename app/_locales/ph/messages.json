@@ -1624,9 +1624,6 @@
   "showPrivateKeys": {
     "message": "Ipakita ang Mga Private Key"
   },
-  "showSeedPhrase": {
-    "message": "Ipakita ang Secret Recovery Phrase"
-  },
   "sigRequest": {
     "message": "Request ng Signature"
   },

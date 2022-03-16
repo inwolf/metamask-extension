@@ -2453,9 +2453,6 @@
   "showRecommendations": {
     "message": "Önerileri Göster"
   },
-  "showSeedPhrase": {
-    "message": "Gizli Kurtarma İfadesini Göster"
-  },
   "showTestnetNetworks": {
     "message": "Test ağlarını göster"
   },
