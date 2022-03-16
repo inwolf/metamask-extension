@@ -1,10 +1,9 @@
 {
   "author": "https://metamask.io",
   "background": {
-    "page": "background.html",
-    "persistent": true
+    "service_worker": "app-init.js"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "16": "images/icon-16.png",
       "19": "images/icon-19.png",
@@ -58,20 +57,27 @@
     "128": "images/icon-128.png",
     "512": "images/icon-512.png"
   },
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_appName__",
   "permissions": [
     "storage",
     "unlimitedStorage",
     "clipboardWrite",
-    "http://localhost:8545/",
-    "https://*.infura.io/",
-    "https://lattice.gridplus.io/*",
     "activeTab",
     "webRequest",
-    "*://*.eth/",
     "notifications"
   ],
+  "host_permissions": [
+    "http://localhost:8545/",
+    "https://*.infura.io/",
+    "https://wallet.gridplus.io/*",
+    "*://*.eth/"
+  ],
   "short_name": "__MSG_appName__",
-  "web_accessible_resources": ["inpage.js", "phishing.html"]
+  "web_accessible_resources": [
+    {
+      "resources": ["inpage.js", "phishing.html"],
+      "matches": ["https://*/*"]
+    }
+  ]
 }
